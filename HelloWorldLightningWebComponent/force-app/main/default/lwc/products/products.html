@@ -1,0 +1,20 @@
+<template>
+    
+    <lightning-card title ="Search" icon-name ="search">
+        <div onkeyup={handleKeyUp}>
+        <lightning-input name = "enter-search" label ="Search for a product!" type = "search"></lightning-input>
+        </div>
+        <p if:true ={queryTerm}> Searched for {queryTerm}!</p>
+    </lightning-card>
+
+    <lightning-card title = "Product" icon-name = "products">
+
+            <lightning-card prodname = {prodName} prodrate = {prodRating} prodprice = {prodPrice} >
+                <lightning-button variant = "brand-outline" label= "Details" title="Product Details" onclick = {displayDetails} class = "slds-m-right_x-small">
+                    <p if:true = {displayDetails}>Details: {prodDetails}.</p>
+                </lightning-button>
+            </lightning-card>
+            
+    </lightning-card>
+
+</template>

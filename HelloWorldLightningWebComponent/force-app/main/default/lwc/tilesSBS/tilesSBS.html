@@ -1,0 +1,36 @@
+<template>
+    <h3>Accounts and Contacts</h3>
+    <div class="slds-box slds-p-around_none slds-m-top_x-small slds-m-bottom_medium slds-m-horizontal_none">
+        <lightning-layout>
+            <lightning-layout-item flexibility="auto" padding="horizontal-medium">
+                <div class="custom-box slds-box slds-p-around_medium slds-text-align_left">
+                    <lightning-card  variant="Narrow"  title="Account" icon-name="standard:account">
+                        <lightning-button-icon  icon-name="utility:down" variant="border-filled" alternative-text="Show More" slot="actions"></lightning-button-icon>
+                        <div class="slds-p-around_medium lgc-bg">
+                            
+                            <lightning-input type="text" label="Account Name" placeholder="type here..." required></lightning-input>
+                            <lightning-input type="text" label="Type" placeholder="type here..." required></lightning-input>
+                            <br>
+                            <lightning-button variant="brand" label="Submit" title="Submit Button" onclick={handleclick} class="slds-m-left_x-small"></lightning-button>
+                        </div>
+                    </lightning-card>
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item flexibility="auto" padding="horizontal-medium">
+                <div class="custom-box slds-box slds-p-around_medium slds-text-align_left">
+                    <lightning-card  variant="Narrow"  title="Contact" icon-name="standard:contact">
+                        <lightning-button-icon  icon-name="utility:down" variant="border-filled" alternative-text="Show More" slot="actions"></lightning-button-icon>
+                        <div class="slds-p-around_medium lgc-bg">
+                            
+                            <lightning-input type="text" label="First Name" placeholder="type here..." required></lightning-input>
+                            <lightning-input type="text" label="Last Name" placeholder="type here..." required></lightning-input>
+                            <lightning-input type="email" label="Email Address" placeholder="someone@example.com" required></lightning-input>
+                            <br>
+                            <lightning-button variant="brand" label="Submit" title="Submit Button" onclick={handleclick} class="slds-m-left_x-small"></lightning-button>
+                        </div>
+                    </lightning-card>
+                </div>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+</template>
